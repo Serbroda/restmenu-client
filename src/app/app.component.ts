@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, HostBinding, ViewChild} from '@angular/core';
 import { Plugins } from '@capacitor/core';
+import {MatSidenav} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,8 @@ import { Plugins } from '@capacitor/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  @ViewChild('sidenav') sidenav: MatSidenav;
+  @HostBinding('class') className = '';
   title = 'restmenu';
 }
